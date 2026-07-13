@@ -22,6 +22,8 @@ jobs:
           cache: yarn
       - run: yarn install --frozen-lockfile
       - run: yarn test
+      - name: Patch SiteHost baseURL (temporal hasta engine 0.2.7)
+        run: node scripts/patch-sitehost-baseurl.mjs
       - name: Generate (baseURL del repo)
         run: NUXT_APP_BASE_URL=/demo-invites/ yarn generate
       - name: Fix asset base under subpath
