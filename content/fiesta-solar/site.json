@@ -487,6 +487,159 @@
       ]
     },
     {
+      "id": "juegos",
+      "height": "130vh",
+      "background": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, #ffd6e5 0%, #fff0c9 100%)"
+      },
+      "layers": [
+        {
+          "id": "capa-globos-3d",
+          "depth": 0.1,
+          "perspective3d": true,
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "globos-3d",
+              "src": "images/globos.png",
+              "alt": "Globos gigantes en 3D",
+              "position": {
+                "x": 72,
+                "y": 48
+              },
+              "size": {
+                "width": 34,
+                "height": "auto"
+              },
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 66
+                },
+                "size": {
+                  "width": 74
+                }
+              },
+              "animations": [
+                {
+                  "type": "rotateY",
+                  "trigger": "mouse",
+                  "from": -14,
+                  "to": 14
+                },
+                {
+                  "type": "rotateX",
+                  "trigger": "mouse",
+                  "from": 7,
+                  "to": -7
+                },
+                {
+                  "type": "rotateY",
+                  "trigger": "gyroscope",
+                  "from": -12,
+                  "to": 12
+                },
+                {
+                  "type": "translateY",
+                  "trigger": "loop",
+                  "from": 0,
+                  "to": -24,
+                  "duration": 4800,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-juegos-texto",
+          "depth": 0,
+          "elements": [
+            {
+              "type": "text",
+              "id": "juegos-titulo",
+              "content": "Trae tu mejor\ncara de fiesta",
+              "semanticTag": "h2",
+              "position": {
+                "x": 30,
+                "y": 40
+              },
+              "font": "Baloo 2",
+              "fontSize": "clamp(30px, 4.6vw, 62px)",
+              "fontWeight": 700,
+              "color": "#2b2140",
+              "lineHeight": "1.2",
+              "textAlign": "left",
+              "splitMode": "words",
+              "staggerDelay": 130,
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 26
+                },
+                "textAlign": "center"
+              },
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 800
+                },
+                {
+                  "type": "translateY",
+                  "trigger": "enter",
+                  "from": 36,
+                  "to": 0,
+                  "duration": 800,
+                  "easing": "easeOutCubic"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "juegos-sub",
+              "content": "Los globos se inclinan con tu mouse\n(o con el teléfono, si lo mueves).",
+              "semanticTag": "p",
+              "position": {
+                "x": 30,
+                "y": 55
+              },
+              "fontSize": "clamp(13px, 1.5vw, 18px)",
+              "fontWeight": 500,
+              "color": "#5c4a7d",
+              "lineHeight": "1.7",
+              "textAlign": "left",
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 40
+                },
+                "textAlign": "center"
+              },
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 800,
+                  "delay": 400
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "rsvp-fiesta",
       "height": "120vh",
       "background": {
