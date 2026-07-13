@@ -1,0 +1,578 @@
+{
+  "schemaVersion": "1.1",
+  "meta": {
+    "title": "Emma & Julián — nuestra boda",
+    "description": "Invitación demo del preset multi-tenant de Parallax Engine: un sitio privado por URL con RSVP.",
+    "ogImage": "images/og-image.png",
+    "fonts": [
+      {
+        "family": "Cormorant Garamond",
+        "source": "google"
+      },
+      {
+        "family": "Great Vibes",
+        "source": "google"
+      }
+    ],
+    "lang": "es"
+  },
+  "theme": {
+    "colors": {
+      "ink": "#f5ead6",
+      "paper": "#1a1626",
+      "accent": "#d4af7a"
+    },
+    "typography": {
+      "display": "Great Vibes",
+      "body": "Cormorant Garamond"
+    }
+  },
+  "sections": [
+    {
+      "id": "portada",
+      "height": "150vh",
+      "background": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, #0e0b18 0%, #1a1626 55%, #241d33 100%)"
+      },
+      "layers": [
+        {
+          "id": "capa-estrellas",
+          "depth": -0.85,
+          "parallaxMode": [
+            "scroll-vertical"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "estrellas",
+              "src": "images/estrellas.png",
+              "alt": "Cielo estrellado",
+              "position": {
+                "x": 50,
+                "y": 34
+              },
+              "size": {
+                "width": 115,
+                "height": "auto"
+              },
+              "opacity": 0.9
+            }
+          ]
+        },
+        {
+          "id": "capa-luna",
+          "depth": -0.5,
+          "parallaxMode": [
+            "scroll-vertical",
+            "mouse"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "luna",
+              "src": "images/luna.png",
+              "alt": "Luna llena",
+              "position": {
+                "x": 24,
+                "y": 20
+              },
+              "size": {
+                "width": 14,
+                "height": "auto"
+              },
+              "mobile": {
+                "position": {
+                  "x": 26,
+                  "y": 12
+                },
+                "size": {
+                  "width": 30
+                }
+              },
+              "animations": [
+                {
+                  "type": "translateY",
+                  "trigger": "loop",
+                  "from": 0,
+                  "to": -10,
+                  "duration": 8000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-rio",
+          "depth": -0.2,
+          "parallaxMode": [
+            "scroll-vertical"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "rio",
+              "src": "images/rio-brillo.png",
+              "alt": "Río bajo la luna",
+              "position": {
+                "x": 50,
+                "y": 88
+              },
+              "size": {
+                "width": 120,
+                "height": "auto"
+              },
+              "opacity": 0.85,
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "loop",
+                  "from": 0.6,
+                  "to": 1,
+                  "duration": 4600,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-luciernagas",
+          "depth": 0.15,
+          "parallaxMode": [
+            "mouse"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "luciernagas",
+              "src": "images/luciernagas.png",
+              "alt": "Luciérnagas",
+              "position": {
+                "x": 50,
+                "y": 55
+              },
+              "size": {
+                "width": 100,
+                "height": "auto"
+              },
+              "opacity": 0.9,
+              "animations": [
+                {
+                  "type": "translateY",
+                  "trigger": "loop",
+                  "from": 0,
+                  "to": -22,
+                  "duration": 7400,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "fadeIn",
+                  "trigger": "loop",
+                  "from": 0.5,
+                  "to": 1,
+                  "duration": 3600,
+                  "yoyo": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-marco",
+          "depth": 0.05,
+          "elements": [
+            {
+              "type": "png",
+              "id": "marco-floral",
+              "src": "images/marco-floral.png",
+              "alt": "Marco floral dorado",
+              "position": {
+                "x": 50,
+                "y": 40
+              },
+              "size": {
+                "width": 44,
+                "height": "auto"
+              },
+              "opacity": 0.9,
+              "mobile": {
+                "size": {
+                  "width": 92
+                }
+              },
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 1600,
+                  "easing": "easeOut"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-nombres",
+          "depth": 0,
+          "elements": [
+            {
+              "type": "text",
+              "id": "kicker",
+              "content": "NOS CASAMOS",
+              "semanticTag": "p",
+              "position": {
+                "x": 50,
+                "y": 26
+              },
+              "fontSize": "clamp(12px, 1.2vw, 15px)",
+              "fontWeight": 600,
+              "color": "#d4af7a",
+              "letterSpacing": "0.5em",
+              "textAlign": "center",
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 900
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "nombres",
+              "content": "Emma & Julián",
+              "semanticTag": "h1",
+              "position": {
+                "x": 50,
+                "y": 36
+              },
+              "font": "Great Vibes",
+              "fontSize": "clamp(52px, 8.5vw, 120px)",
+              "fontWeight": 400,
+              "color": "#f5ead6",
+              "textAlign": "center",
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 1300,
+                  "delay": 400
+                },
+                {
+                  "type": "scale",
+                  "trigger": "enter",
+                  "from": 0.92,
+                  "to": 1,
+                  "duration": 1300,
+                  "delay": 400,
+                  "easing": "easeOutCubic"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "fecha",
+              "content": "Sábado 14 de noviembre de 2026 · A la orilla del río",
+              "semanticTag": "p",
+              "position": {
+                "x": 50,
+                "y": 47
+              },
+              "font": "Cormorant Garamond",
+              "fontSize": "clamp(15px, 1.8vw, 22px)",
+              "color": "#cbbfa5",
+              "letterSpacing": "0.12em",
+              "textAlign": "center",
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 900,
+                  "delay": 1000
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "hint",
+              "content": "▾",
+              "semanticTag": "span",
+              "position": {
+                "x": 50,
+                "y": 60
+              },
+              "fontSize": "18px",
+              "color": "#d4af7a",
+              "animations": [
+                {
+                  "type": "translateY",
+                  "trigger": "loop",
+                  "from": 0,
+                  "to": 10,
+                  "duration": 1600,
+                  "yoyo": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "detalles",
+      "height": "110vh",
+      "background": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, #241d33 0%, #1a1626 100%)"
+      },
+      "layers": [
+        {
+          "id": "capa-detalles",
+          "depth": 0,
+          "elements": [
+            {
+              "type": "text",
+              "id": "detalles-titulo",
+              "content": "La celebración",
+              "semanticTag": "h2",
+              "position": {
+                "x": 50,
+                "y": 18
+              },
+              "font": "Great Vibes",
+              "fontSize": "clamp(34px, 4.6vw, 60px)",
+              "color": "#d4af7a",
+              "textAlign": "center",
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 900
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "detalle-ceremonia",
+              "content": "CEREMONIA\n5:00 pm · Jardín del río",
+              "semanticTag": "p",
+              "position": {
+                "x": 32,
+                "y": 42
+              },
+              "font": "Cormorant Garamond",
+              "fontSize": "clamp(15px, 1.7vw, 21px)",
+              "color": "#f5ead6",
+              "letterSpacing": "0.1em",
+              "lineHeight": "2",
+              "textAlign": "center",
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 34
+                }
+              },
+              "animations": [
+                {
+                  "type": "translateY",
+                  "trigger": "enter",
+                  "from": 26,
+                  "to": 0,
+                  "duration": 900,
+                  "easing": "easeOutCubic"
+                },
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 900
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "detalle-fiesta",
+              "content": "RECEPCIÓN\n7:00 pm · Bajo las luces",
+              "semanticTag": "p",
+              "position": {
+                "x": 68,
+                "y": 42
+              },
+              "font": "Cormorant Garamond",
+              "fontSize": "clamp(15px, 1.7vw, 21px)",
+              "color": "#f5ead6",
+              "letterSpacing": "0.1em",
+              "lineHeight": "2",
+              "textAlign": "center",
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "animations": [
+                {
+                  "type": "translateY",
+                  "trigger": "enter",
+                  "from": 26,
+                  "to": 0,
+                  "duration": 900,
+                  "delay": 250,
+                  "easing": "easeOutCubic"
+                },
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 900,
+                  "delay": 250
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "dress",
+              "content": "Dress code: elegante bajo las estrellas",
+              "semanticTag": "p",
+              "position": {
+                "x": 50,
+                "y": 66
+              },
+              "font": "Cormorant Garamond",
+              "fontSize": "clamp(14px, 1.5vw, 18px)",
+              "color": "#9d8f75",
+              "letterSpacing": "0.14em",
+              "textAlign": "center",
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 66
+                }
+              },
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 900,
+                  "delay": 500
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rsvp",
+      "height": "120vh",
+      "background": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, #1a1626 0%, #0e0b18 100%)"
+      },
+      "layers": [
+        {
+          "id": "capa-rsvp",
+          "depth": 0,
+          "elements": [
+            {
+              "type": "text",
+              "id": "rsvp-titulo",
+              "content": "¿Nos acompañas?",
+              "semanticTag": "h2",
+              "position": {
+                "x": 50,
+                "y": 14
+              },
+              "font": "Great Vibes",
+              "fontSize": "clamp(34px, 4.6vw, 60px)",
+              "color": "#f5ead6",
+              "textAlign": "center",
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 900
+                }
+              ]
+            },
+            {
+              "type": "component",
+              "id": "rsvp-form",
+              "name": "FormBlock",
+              "position": {
+                "x": 50,
+                "y": 52
+              },
+              "size": {
+                "width": "min(88%, 520px)"
+              },
+              "props": {
+                "webhookUrl": "https://httpbin.org/post",
+                "fields": [
+                  {
+                    "name": "nombre",
+                    "label": "Tu nombre",
+                    "type": "text",
+                    "required": true
+                  },
+                  {
+                    "name": "asistencia",
+                    "label": "¿Asistirás?",
+                    "type": "select",
+                    "options": [
+                      "Sí, ahí estaré",
+                      "No podré ir"
+                    ],
+                    "required": true
+                  },
+                  {
+                    "name": "acompanantes",
+                    "label": "Acompañantes",
+                    "type": "number"
+                  },
+                  {
+                    "name": "mensaje",
+                    "label": "Un mensaje para los novios",
+                    "type": "textarea"
+                  }
+                ],
+                "submitLabel": "Enviar confirmación",
+                "successMessage": "¡Gracias! Te esperamos bajo las estrellas.",
+                "errorMessage": "Algo falló — inténtalo de nuevo.",
+                "honeypotField": "website",
+                "styling": {
+                  "inputBg": "rgba(36, 29, 51, 0.85)",
+                  "inputBorder": "#d4af7a",
+                  "buttonBg": "#d4af7a",
+                  "buttonText": "#1a1626",
+                  "fontFamily": "Cormorant Garamond"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

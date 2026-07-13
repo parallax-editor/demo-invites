@@ -1,0 +1,22 @@
+{
+  "name": "demo-invites",
+  "version": "0.1.0",
+  "description": "Showcase del preset multi-tenant de Parallax Engine: invitaciones privadas por URL directa, cada una un mundo parallax con RSVP.",
+  "private": true,
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "test": "node tests/validate.mjs"
+  },
+  "dependencies": {
+    "@parallax-editor/parallax-engine": "^0.2.6",
+    "vue": "^3.4.38"
+  },
+  "devDependencies": {
+    "@nuxtjs/google-fonts": "^3.2.0",
+    "nuxt": "^3.13.0",
+    "typescript": "~5.4.5"
+  }
+}

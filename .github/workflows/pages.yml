@@ -1,0 +1,48 @@
+# Publica el sitio generado (Nuxt SSG + Parallax Engine) a GitHub Pages.
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: yarn
+      - run: yarn install --frozen-lockfile
+      - run: yarn test
+      - name: Generate (baseURL del repo)
+        run: NUXT_APP_BASE_URL=/demo-invites/ yarn generate
+      - name: Fix asset base under subpath
+        # El engine sirve los assets de contenido en rutas /content/... absolutas;
+        # bajo el subpath /demo-invites/ de Pages hay que anclarlas al repo. (Los fetch
+        # de site.json ya respetan baseURL; esto cubre <img src> y fonts.)
+        run: |
+          find .output/public -type f \( -name '*.js' -o -name '*.html' -o -name '*.json' \) \
+            -exec sed -i 's#/content/#/demo-invites/content/#g' {} +
+          # revierte dobles prefijos si algún path ya venía anclado
+          find .output/public -type f \( -name '*.js' -o -name '*.html' -o -name '*.json' \) \
+            -exec sed -i 's#/demo-invites/demo-invites/#/demo-invites/#g' {} +
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: .output/public
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

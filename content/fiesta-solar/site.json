@@ -1,0 +1,359 @@
+{
+  "schemaVersion": "1.1",
+  "meta": {
+    "title": "Simón cumple 8 — ¡fiesta solar!",
+    "description": "Invitación demo de cumpleaños: globos, confeti y sol en parallax. Preset multi-tenant.",
+    "ogImage": "images/og-image.png",
+    "fonts": [
+      {
+        "family": "Baloo 2",
+        "source": "google"
+      },
+      {
+        "family": "Inter",
+        "source": "google"
+      }
+    ],
+    "lang": "es"
+  },
+  "theme": {
+    "colors": {
+      "ink": "#2b2140",
+      "paper": "#fff7e8",
+      "accent": "#ff5d8f"
+    },
+    "typography": {
+      "display": "Baloo 2",
+      "body": "Inter"
+    }
+  },
+  "sections": [
+    {
+      "id": "fiesta",
+      "height": "150vh",
+      "background": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, #ffe9c7 0%, #ffd6e5 55%, #cdeffd 100%)"
+      },
+      "layers": [
+        {
+          "id": "capa-sol",
+          "depth": -0.6,
+          "parallaxMode": [
+            "scroll-vertical"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "sol",
+              "src": "images/sol.png",
+              "alt": "Sol radiante",
+              "position": {
+                "x": 80,
+                "y": 16
+              },
+              "size": {
+                "width": 24,
+                "height": "auto"
+              },
+              "mobile": {
+                "position": {
+                  "x": 76,
+                  "y": 10
+                },
+                "size": {
+                  "width": 44
+                }
+              },
+              "animations": [
+                {
+                  "type": "rotate",
+                  "trigger": "loop",
+                  "from": -6,
+                  "to": 6,
+                  "duration": 7000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-confeti",
+          "depth": -0.3,
+          "parallaxMode": [
+            "scroll-vertical"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "confeti",
+              "src": "images/confeti.png",
+              "alt": "Confeti de colores",
+              "position": {
+                "x": 50,
+                "y": 40
+              },
+              "size": {
+                "width": 110,
+                "height": "auto"
+              },
+              "animations": [
+                {
+                  "type": "translateY",
+                  "trigger": "scroll",
+                  "from": -40,
+                  "to": 80,
+                  "range": [
+                    0,
+                    1
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-globos",
+          "depth": 0.2,
+          "parallaxMode": [
+            "mouse"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "globos",
+              "src": "images/globos.png",
+              "alt": "Globos de colores",
+              "position": {
+                "x": 22,
+                "y": 55
+              },
+              "size": {
+                "width": 30,
+                "height": "auto"
+              },
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 74
+                },
+                "size": {
+                  "width": 70
+                }
+              },
+              "animations": [
+                {
+                  "type": "translateY",
+                  "trigger": "loop",
+                  "from": 0,
+                  "to": -26,
+                  "duration": 5200,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-texto-fiesta",
+          "depth": 0,
+          "elements": [
+            {
+              "type": "text",
+              "id": "kicker-fiesta",
+              "content": "¡ESTÁS INVITADO!",
+              "semanticTag": "p",
+              "position": {
+                "x": 58,
+                "y": 26
+              },
+              "fontSize": "clamp(13px, 1.4vw, 17px)",
+              "fontWeight": 700,
+              "color": "#ff5d8f",
+              "letterSpacing": "0.4em",
+              "textAlign": "center",
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 22
+                }
+              },
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 800
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "titulo-fiesta",
+              "content": "Simón cumple 8",
+              "semanticTag": "h1",
+              "position": {
+                "x": 58,
+                "y": 36
+              },
+              "font": "Baloo 2",
+              "fontSize": "clamp(40px, 7vw, 96px)",
+              "fontWeight": 700,
+              "color": "#2b2140",
+              "textAlign": "center",
+              "splitMode": "words",
+              "staggerDelay": 140,
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 32
+                }
+              },
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 700
+                },
+                {
+                  "type": "translateY",
+                  "trigger": "enter",
+                  "from": 40,
+                  "to": 0,
+                  "duration": 700,
+                  "easing": "easeOutCubic"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "fecha-fiesta",
+              "content": "Domingo 29 de noviembre · 3:00 pm · Parque de los Cometas",
+              "semanticTag": "p",
+              "position": {
+                "x": 58,
+                "y": 46
+              },
+              "fontSize": "clamp(14px, 1.6vw, 20px)",
+              "fontWeight": 500,
+              "color": "#5c4a7d",
+              "letterSpacing": "0.06em",
+              "textAlign": "center",
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 42
+                }
+              },
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 800,
+                  "delay": 700
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rsvp-fiesta",
+      "height": "120vh",
+      "background": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, #cdeffd 0%, #fff7e8 100%)"
+      },
+      "layers": [
+        {
+          "id": "capa-rsvp-fiesta",
+          "depth": 0,
+          "elements": [
+            {
+              "type": "text",
+              "id": "rsvp-titulo-fiesta",
+              "content": "¿Vienes a la fiesta?",
+              "semanticTag": "h2",
+              "position": {
+                "x": 50,
+                "y": 14
+              },
+              "font": "Baloo 2",
+              "fontSize": "clamp(28px, 4vw, 52px)",
+              "fontWeight": 700,
+              "color": "#2b2140",
+              "textAlign": "center",
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 800
+                }
+              ]
+            },
+            {
+              "type": "component",
+              "id": "rsvp-form-fiesta",
+              "name": "FormBlock",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": "min(88%, 500px)"
+              },
+              "props": {
+                "webhookUrl": "https://httpbin.org/post",
+                "fields": [
+                  {
+                    "name": "nombre",
+                    "label": "Nombre del invitado",
+                    "type": "text",
+                    "required": true
+                  },
+                  {
+                    "name": "asistencia",
+                    "label": "¿Asistirá?",
+                    "type": "select",
+                    "options": [
+                      "¡Sí!",
+                      "No podrá"
+                    ],
+                    "required": true
+                  },
+                  {
+                    "name": "ninos",
+                    "label": "¿Cuántos niños vienen?",
+                    "type": "number"
+                  }
+                ],
+                "submitLabel": "¡Allá estaré!",
+                "successMessage": "¡Genial! Nos vemos entre globos y confeti.",
+                "errorMessage": "Ups, algo falló — inténtalo otra vez.",
+                "honeypotField": "website",
+                "styling": {
+                  "inputBg": "rgba(255, 255, 255, 0.92)",
+                  "inputBorder": "#ff5d8f",
+                  "buttonBg": "#ff5d8f",
+                  "buttonText": "#ffffff",
+                  "fontFamily": "Inter"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
