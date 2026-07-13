@@ -61,6 +61,47 @@
           ]
         },
         {
+          "id": "capa-fugaz-boda",
+          "depth": -0.6,
+          "elements": [
+            {
+              "type": "png",
+              "id": "fugaz-boda",
+              "src": "images/estrella-fugaz.png",
+              "alt": "Estrella fugaz — pide un deseo",
+              "position": {
+                "x": 68,
+                "y": 10
+              },
+              "size": {
+                "width": 20,
+                "height": "auto"
+              },
+              "opacity": 0.85,
+              "animations": [
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -60,
+                  "to": 120,
+                  "duration": 9000,
+                  "easing": "easeInQuart",
+                  "loop": true
+                },
+                {
+                  "type": "fadeIn",
+                  "trigger": "loop",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 4500,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "id": "capa-luna",
           "depth": -0.5,
           "parallaxMode": [
@@ -332,6 +373,242 @@
       ]
     },
     {
+      "id": "historia",
+      "height": "240vh",
+      "scrollBehavior": "pinned",
+      "background": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, #241d33 0%, #1a1626 100%)"
+      },
+      "layers": [
+        {
+          "id": "capa-anillos",
+          "depth": -0.15,
+          "parallaxMode": [
+            "mouse"
+          ],
+          "blendMode": "screen",
+          "elements": [
+            {
+              "type": "png",
+              "id": "anillos",
+              "src": "images/anillos.png",
+              "alt": "Anillos entrelazados",
+              "position": {
+                "x": 72,
+                "y": 44
+              },
+              "size": {
+                "width": 24,
+                "height": "auto"
+              },
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 22
+                },
+                "size": {
+                  "width": 52
+                }
+              },
+              "animations": [
+                {
+                  "type": "clipPath",
+                  "trigger": "scroll",
+                  "from": 0,
+                  "to": 100,
+                  "range": [
+                    0.05,
+                    0.45
+                  ]
+                },
+                {
+                  "type": "rotate",
+                  "trigger": "loop",
+                  "from": -3,
+                  "to": 3,
+                  "duration": 7000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-historia-texto",
+          "depth": 0,
+          "elements": [
+            {
+              "type": "text",
+              "id": "historia-titulo",
+              "content": "Nuestra historia",
+              "semanticTag": "h2",
+              "position": {
+                "x": 30,
+                "y": 30
+              },
+              "font": "Great Vibes",
+              "fontSize": "clamp(34px, 4.8vw, 62px)",
+              "color": "#d4af7a",
+              "textAlign": "left",
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 42
+                },
+                "textAlign": "center"
+              },
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "scroll",
+                  "from": 0,
+                  "to": 1,
+                  "range": [
+                    0,
+                    0.18
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "hito-1",
+              "content": "2019 — Un café que duró cuatro horas.",
+              "semanticTag": "p",
+              "position": {
+                "x": 30,
+                "y": 42
+              },
+              "font": "Cormorant Garamond",
+              "fontSize": "clamp(15px, 1.7vw, 21px)",
+              "color": "#f5ead6",
+              "letterSpacing": "0.06em",
+              "textAlign": "left",
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 54
+                },
+                "textAlign": "center"
+              },
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "scroll",
+                  "from": 0,
+                  "to": 1,
+                  "range": [
+                    0.15,
+                    0.3
+                  ]
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "scroll",
+                  "from": -40,
+                  "to": 0,
+                  "range": [
+                    0.15,
+                    0.32
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "hito-2",
+              "content": "2023 — Las llaves de un mismo techo.",
+              "semanticTag": "p",
+              "position": {
+                "x": 30,
+                "y": 50
+              },
+              "font": "Cormorant Garamond",
+              "fontSize": "clamp(15px, 1.7vw, 21px)",
+              "color": "#f5ead6",
+              "letterSpacing": "0.06em",
+              "textAlign": "left",
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 62
+                },
+                "textAlign": "center"
+              },
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "scroll",
+                  "from": 0,
+                  "to": 1,
+                  "range": [
+                    0.35,
+                    0.5
+                  ]
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "scroll",
+                  "from": -40,
+                  "to": 0,
+                  "range": [
+                    0.35,
+                    0.52
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "hito-3",
+              "content": "2026 — Una pregunta bajo la luna. Dijo que sí.",
+              "semanticTag": "p",
+              "position": {
+                "x": 30,
+                "y": 58
+              },
+              "font": "Cormorant Garamond",
+              "fontSize": "clamp(15px, 1.7vw, 21px)",
+              "color": "#f5ead6",
+              "letterSpacing": "0.06em",
+              "textAlign": "left",
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 70
+                },
+                "textAlign": "center"
+              },
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "scroll",
+                  "from": 0,
+                  "to": 1,
+                  "range": [
+                    0.55,
+                    0.7
+                  ]
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "scroll",
+                  "from": -40,
+                  "to": 0,
+                  "range": [
+                    0.55,
+                    0.72
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "detalles",
       "height": "110vh",
       "background": {
@@ -482,6 +759,132 @@
       ]
     },
     {
+      "id": "brindis",
+      "height": "120vh",
+      "background": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, #1a1626 0%, #241d33 100%)"
+      },
+      "layers": [
+        {
+          "id": "capa-luciernagas-brindis",
+          "depth": -0.3,
+          "blendMode": "screen",
+          "elements": [
+            {
+              "type": "png",
+              "id": "luciernagas-brindis",
+              "src": "images/luciernagas.png",
+              "alt": "Luciérnagas",
+              "position": {
+                "x": 50,
+                "y": 45
+              },
+              "size": {
+                "width": 96,
+                "height": "auto"
+              },
+              "opacity": 0.6,
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "loop",
+                  "from": 0.4,
+                  "to": 1,
+                  "duration": 4200,
+                  "yoyo": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-copas",
+          "depth": 0.05,
+          "parallaxMode": [
+            "mouse"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "copas",
+              "src": "images/copas.png",
+              "alt": "Copas brindando",
+              "position": {
+                "x": 50,
+                "y": 48
+              },
+              "size": {
+                "width": 22,
+                "height": "auto"
+              },
+              "mobile": {
+                "size": {
+                  "width": 52
+                }
+              },
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "enter",
+                  "from": 0.72,
+                  "to": 1,
+                  "duration": 1200,
+                  "easing": "easeOutCubic"
+                },
+                {
+                  "type": "rotate",
+                  "trigger": "loop",
+                  "from": -2,
+                  "to": 2,
+                  "duration": 4600,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-brindis-texto",
+          "depth": 0,
+          "elements": [
+            {
+              "type": "text",
+              "id": "brindis-titulo",
+              "content": "Brindaremos hasta que amanezca",
+              "semanticTag": "h2",
+              "position": {
+                "x": 50,
+                "y": 76
+              },
+              "font": "Great Vibes",
+              "fontSize": "clamp(28px, 4vw, 54px)",
+              "color": "#f5ead6",
+              "textAlign": "center",
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 1100
+                },
+                {
+                  "type": "translateY",
+                  "trigger": "enter",
+                  "from": 26,
+                  "to": 0,
+                  "duration": 1100,
+                  "easing": "easeOutCubic"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "rsvp",
       "height": "120vh",
       "background": {
@@ -574,5 +977,12 @@
         }
       ]
     }
-  ]
+  ],
+  "cursor": {
+    "enabled": true,
+    "color": "#d4af7a",
+    "size": 16,
+    "hoverScale": 2.4,
+    "blendMode": "difference"
+  }
 }

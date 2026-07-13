@@ -37,6 +37,51 @@
       },
       "layers": [
         {
+          "id": "capa-serpentinas",
+          "depth": -0.45,
+          "parallaxMode": [
+            "scroll-vertical"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "serpentinas",
+              "src": "images/serpentinas.png",
+              "alt": "Serpentinas de colores",
+              "position": {
+                "x": 50,
+                "y": 26
+              },
+              "size": {
+                "width": 105,
+                "height": "auto"
+              },
+              "opacity": 0.9,
+              "animations": [
+                {
+                  "type": "translateY",
+                  "trigger": "scroll",
+                  "from": -60,
+                  "to": 60,
+                  "range": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "type": "skew",
+                  "trigger": "loop",
+                  "from": -1.5,
+                  "to": 1.5,
+                  "duration": 3600,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "id": "capa-sol",
           "depth": -0.6,
           "parallaxMode": [
@@ -267,6 +312,181 @@
       ]
     },
     {
+      "id": "pastel",
+      "height": "220vh",
+      "scrollBehavior": "pinned",
+      "background": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, #cdeffd 0%, #ffd6e5 100%)"
+      },
+      "layers": [
+        {
+          "id": "capa-confeti-pastel",
+          "depth": -0.4,
+          "elements": [
+            {
+              "type": "png",
+              "id": "confeti-pastel",
+              "src": "images/confeti.png",
+              "alt": "Confeti",
+              "position": {
+                "x": 50,
+                "y": 40
+              },
+              "size": {
+                "width": 112,
+                "height": "auto"
+              },
+              "opacity": 0.7,
+              "animations": [
+                {
+                  "type": "translateY",
+                  "trigger": "scroll",
+                  "from": -80,
+                  "to": 120,
+                  "range": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "type": "rotate",
+                  "trigger": "scroll",
+                  "from": -4,
+                  "to": 4,
+                  "range": [
+                    0,
+                    1
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-pastel",
+          "depth": 0.05,
+          "parallaxMode": [
+            "mouse"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "pastel",
+              "src": "images/pastel.png",
+              "alt": "Pastel de tres pisos con velas",
+              "position": {
+                "x": 50,
+                "y": 52
+              },
+              "size": {
+                "width": 24,
+                "height": "auto"
+              },
+              "mobile": {
+                "size": {
+                  "width": 58
+                }
+              },
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "scroll",
+                  "from": 0.5,
+                  "to": 1.1,
+                  "range": [
+                    0.05,
+                    0.55
+                  ]
+                },
+                {
+                  "type": "rotate",
+                  "trigger": "loop",
+                  "from": -2,
+                  "to": 2,
+                  "duration": 3800,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-pastel-texto",
+          "depth": 0,
+          "elements": [
+            {
+              "type": "text",
+              "id": "pastel-titulo",
+              "content": "Habrá pastel gigante,\npiñata y carrera de sacos",
+              "semanticTag": "h2",
+              "position": {
+                "x": 50,
+                "y": 16
+              },
+              "font": "Baloo 2",
+              "fontSize": "clamp(26px, 4vw, 54px)",
+              "fontWeight": 700,
+              "color": "#2b2140",
+              "lineHeight": "1.3",
+              "textAlign": "center",
+              "splitMode": "words",
+              "staggerDelay": 110,
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "scroll",
+                  "from": 0,
+                  "to": 1,
+                  "range": [
+                    0.1,
+                    0.35
+                  ]
+                },
+                {
+                  "type": "translateY",
+                  "trigger": "scroll",
+                  "from": 40,
+                  "to": 0,
+                  "range": [
+                    0.1,
+                    0.4
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "pastel-nota",
+              "content": "(el pastel crece con tu scroll, como la emoción)",
+              "semanticTag": "p",
+              "position": {
+                "x": 50,
+                "y": 88
+              },
+              "fontSize": "clamp(12px, 1.3vw, 16px)",
+              "fontWeight": 500,
+              "color": "#5c4a7d",
+              "textAlign": "center",
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "scroll",
+                  "from": 0,
+                  "to": 1,
+                  "range": [
+                    0.4,
+                    0.6
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "rsvp-fiesta",
       "height": "120vh",
       "background": {
@@ -274,6 +494,41 @@
         "value": "linear-gradient(180deg, #cdeffd 0%, #fff7e8 100%)"
       },
       "layers": [
+        {
+          "id": "capa-globos-rsvp",
+          "depth": -0.35,
+          "elements": [
+            {
+              "type": "png",
+              "id": "globos-rsvp",
+              "src": "images/globos.png",
+              "alt": "Globos",
+              "position": {
+                "x": 86,
+                "y": 46
+              },
+              "size": {
+                "width": 22,
+                "height": "auto"
+              },
+              "opacity": 0.8,
+              "mobile": {
+                "visible": false
+              },
+              "animations": [
+                {
+                  "type": "translateY",
+                  "trigger": "loop",
+                  "from": 0,
+                  "to": -30,
+                  "duration": 5600,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ]
+        },
         {
           "id": "capa-rsvp-fiesta",
           "depth": 0,
@@ -355,5 +610,12 @@
         }
       ]
     }
-  ]
+  ],
+  "cursor": {
+    "enabled": true,
+    "color": "#ff5d8f",
+    "size": 22,
+    "hoverScale": 2.6,
+    "blendMode": "multiply"
+  }
 }
