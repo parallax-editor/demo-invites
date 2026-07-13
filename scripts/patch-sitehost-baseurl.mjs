@@ -17,5 +17,17 @@ if (!s.includes(oldTo) || !s.includes(anchor)) {
 s = s.replace(anchor, anchor + "\n// [demo patch] baseURL-aware URLs bajo subpath (GitHub Pages)\nconst APP_BASE: string = (useRuntimeConfig()?.app?.baseURL || '/').replace(/\\/*$/, '/')")
 s = s.replace(oldTo, "function slugToUrl(slug: string): string {\n  return slug === HOME_SLUG ? APP_BASE : APP_BASE + slug\n}")
 s = s.replace(oldFrom, "function urlToSlug(path: string): string {\n  let p = path || '/'\n  if (APP_BASE !== '/' && p.startsWith(APP_BASE)) p = '/' + p.slice(APP_BASE.length)\n  if (!p || p === '/') return HOME_SLUG\n  return p.replace(/^\\/+|\\/+$/g, '').split('/')[0] || HOME_SLUG\n}")
+// Scroll-reset robusto al navegar entre sitios: window.scrollTo simple pierde
+// contra el smooth-scroll (lenis) que rehidrata la posición vieja — el mundo
+// destino aparecía scrolleado abajo. Triple reset diferido con rAF.
+const oldScroll = "  if (typeof window !== 'undefined') window.scrollTo(0, 0)"
+const scrollFix = `  if (typeof window !== 'undefined') {
+    window.scrollTo(0, 0)
+    requestAnimationFrame(() => {
+      window.scrollTo(0, 0)
+      requestAnimationFrame(() => window.scrollTo(0, 0))
+    })
+  }`
+if (s.includes(oldScroll)) s = s.replace(oldScroll, scrollFix)
 writeFileSync(p, s)
 console.log('[patch-sitehost] SiteHost.vue parcheado con APP_BASE')

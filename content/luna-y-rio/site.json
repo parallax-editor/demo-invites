@@ -374,8 +374,7 @@
     },
     {
       "id": "historia",
-      "height": "240vh",
-      "scrollBehavior": "pinned",
+      "height": "150vh",
       "background": {
         "type": "gradient",
         "value": "linear-gradient(180deg, #241d33 0%, #1a1626 100%)"
@@ -396,7 +395,7 @@
               "alt": "Anillos entrelazados",
               "position": {
                 "x": 72,
-                "y": 44
+                "y": 42
               },
               "size": {
                 "width": 24,
@@ -419,7 +418,7 @@
                   "to": 100,
                   "range": [
                     0.05,
-                    0.45
+                    0.5
                   ]
                 },
                 {
@@ -446,7 +445,7 @@
               "semanticTag": "h2",
               "position": {
                 "x": 30,
-                "y": 30
+                "y": 24
               },
               "font": "Great Vibes",
               "fontSize": "clamp(34px, 4.8vw, 62px)",
@@ -467,7 +466,7 @@
                   "to": 1,
                   "range": [
                     0,
-                    0.18
+                    0.2
                   ]
                 }
               ]
@@ -479,7 +478,7 @@
               "semanticTag": "p",
               "position": {
                 "x": 30,
-                "y": 42
+                "y": 38
               },
               "font": "Cormorant Garamond",
               "fontSize": "clamp(15px, 1.7vw, 21px)",
@@ -500,7 +499,7 @@
                   "from": 0,
                   "to": 1,
                   "range": [
-                    0.15,
+                    0.1,
                     0.3
                   ]
                 },
@@ -510,8 +509,8 @@
                   "from": -40,
                   "to": 0,
                   "range": [
-                    0.15,
-                    0.32
+                    0.1,
+                    0.3
                   ]
                 }
               ]
@@ -523,7 +522,7 @@
               "semanticTag": "p",
               "position": {
                 "x": 30,
-                "y": 50
+                "y": 48
               },
               "font": "Cormorant Garamond",
               "fontSize": "clamp(15px, 1.7vw, 21px)",
@@ -544,8 +543,8 @@
                   "from": 0,
                   "to": 1,
                   "range": [
-                    0.35,
-                    0.5
+                    0.25,
+                    0.45
                   ]
                 },
                 {
@@ -554,8 +553,8 @@
                   "from": -40,
                   "to": 0,
                   "range": [
-                    0.35,
-                    0.52
+                    0.25,
+                    0.45
                   ]
                 }
               ]
@@ -588,8 +587,8 @@
                   "from": 0,
                   "to": 1,
                   "range": [
-                    0.55,
-                    0.7
+                    0.4,
+                    0.6
                   ]
                 },
                 {
@@ -598,8 +597,8 @@
                   "from": -40,
                   "to": 0,
                   "range": [
-                    0.55,
-                    0.72
+                    0.4,
+                    0.6
                   ]
                 }
               ]
