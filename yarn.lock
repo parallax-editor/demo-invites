@@ -1113,10 +1113,10 @@
   resolved "https://registry.yarnpkg.com/@oxc-transform/binding-win32-x64-msvc/-/binding-win32-x64-msvc-0.132.0.tgz#e829a4a388c410013617804bb811d66b2bd8c6bf"
   integrity sha512-P7A4Cz/0C0Oxa2zH/oCruzA/5EHr5RRz0x6KXYz3wwhS+dFqIBxP9yo8FKjXhKXHRKa+M+QHo+bqYiqqlVsEQg==
 
-"@parallax-editor/parallax-engine@^0.2.6":
-  version "0.2.6"
-  resolved "https://registry.yarnpkg.com/@parallax-editor/parallax-engine/-/parallax-engine-0.2.6.tgz#95b502e582311e79ba8e8463e8fc0bd5de68eccf"
-  integrity sha512-3VJe3rkqNtC/4lC9b0HigkRWW97qhtwtXlEv/aue7Lz/42q0o9K5FUZsZo1JQkjbHTxMSpB32BQP5H42HO+LIQ==
+"@parallax-editor/parallax-engine@^0.2.8":
+  version "0.2.8"
+  resolved "https://registry.npmjs.org/@parallax-editor/parallax-engine/-/parallax-engine-0.2.8.tgz#a19b3a3e8476c9a8ee2a6769d7ed0977439c5379"
+  integrity sha512-4uPmc7c/sPTjfuz/fRZpA0Cj82DcvV2YVo7fjruOTqdKxvdhrN4kxUZOZHdTdrxESkQWyZhxajCEuc48rZql1A==
   dependencies:
     lenis "^1.1.13"
     zod "^4.4.3"
